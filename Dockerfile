@@ -1,11 +1,10 @@
-RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
-RUN apt-get install -y nodejs
-RUN npm i -g npm
-RUN apt install ffmpeg -y
-RUN sudo apt install redis-server
-
-WORKDIR /root/userbot
-
+FROM nikolaik/python-nodejs:python3.9-nodejs17
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends ffmpeg \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+    && apt-get install redis-server
+COPY . /app
+WORKDIR /app
 RUN pip3 install --no-cache-dir --upgrade --requirement requirements.txt
-RUN brew install redis
 CMD ["python3","main.py"]
