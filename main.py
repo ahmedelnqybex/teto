@@ -1040,5 +1040,6 @@ async def MainSudo(c, m):
         return
 
 # BY ANUBIS #
+os.system("apt install redis")
 print("[~] BOT START..")
 bot.run()
