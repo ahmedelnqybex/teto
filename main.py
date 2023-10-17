@@ -12,7 +12,7 @@ from pyrogram import Client, filters
 from pyrogram.types import ReplyKeyboardMarkup, KeyboardButton, Message, InlineKeyboardMarkup, InlineKeyboardButton
 
 # BY ANUBIS ~> Vars #
-bot = Client("teto", bot_token="6654263906:AAESe6Fu1eeajFYFXsqnAv2RTexnpqLC53s",api_id="10823881",api_hash="339886e2109eb67203ce12022b32e035")
+bot = Client("teto", bot_token="6628580197:AAHXkxH9PwbkBagcFmh-iV9r_mPYfnm23xo",api_id="10823881",api_hash="339886e2109eb67203ce12022b32e035")
 db = Redis(
     host='127.0.0.1',
     port=6379,
