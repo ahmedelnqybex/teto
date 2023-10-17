@@ -5,6 +5,6 @@ RUN apt install ffmpeg -y
 
 WORKDIR /root/userbot
 
-RUN pip3 install --no-cache-dir -r requirements.txt
+RUN pip3 install --no-cache-dir --upgrade --requirement requirements.txt
 
 CMD ["python3","main.py"]
